@@ -1,16 +1,4 @@
-<p><strong>Định dạng của dữ liệu</strong></p>
-<p>Với mỗi ảnh tên img_{num}.jpg, đội thi cần xuất kết ra file .txt. Tên file .txt sẽ có định dạng res_img_{num}.txt trong đó num là số thứ tự của ảnh.</p>
-<p style="padding-left: 30px;">Ví dụ: ảnh <strong>img_1</strong>.jpg thì cần xuất kết quả ra tệp <strong>res_img_1</strong>.txt</p>
-<p>Mỗi dòng của tệp kết quả .txt sẽ biểu diễn cho một bounding box (tọa độ 4 điểm) và nhãn của chữ chứa trong bounding box đó. Định dạng như sau: </p>
-<p style="padding-left: 30px;">x1,y1,x2,y2,x3,y3,x4,y4,Nhãn</p>
-<p style="padding-left: 30px;">Trong đó: tọa độ 4 điểm của bounding box được xếp theo chiều kinh đồng hồ với:</p>
-<ul>
-<ul>
-<li>(x1,y1) là tọa độ của điểm top-left, </li>
-<li>(x2,y2) là tọa độ của điểm top-right,</li>
-<li>(x3,y3) là tọa độ của điểm bottom-right,</li>
-<li>(x4,y4) là tọa độ của điểm bottom-left.</li>
-</ul>
-</ul>
-<p style="padding-left: 30px;">Ví dụ: 344,232,443,239,440,288,341,280,PHúC</p>
-<p>Lưu ý: Nén tất cả các file kết quả vào file .zip (Ví dụ: <strong>submit.zip)</strong> và nộp lên hệ thống. Các file kết quả trong file .zip <strong>không được</strong> nằm trong thư mục cha nào.</p>
+<h3><strong>Hướng dẫn nộp kết quả</strong></h3>
+<p>Với mỗi file t&ecirc;n input_{num}.csv, đội thi cần xuất kết ra file .csv tương ứng. File kết quả sẽ có định dạng res_{num}.csv trong đó num là số thứ tự của file.</p>
+<p>V&iacute; dụ: file&nbsp;<strong>input_1.csv</strong>&nbsp;th&igrave; cần xuất kết quả ra file&nbsp;<strong>res_1.csv</strong>.<strong>&nbsp;</strong>Trong file <strong>res_1.csv</strong>, kết quả dự đoán được tr&igrave;nh bày dạng cột và không y&ecirc;u cầu có header.<br />V&iacute; dụ kết quả dự đoán cho 7 giờ tương lai là 40.3, 39.8, 45.6, 52.4, 60.1, 39.8, 44.0, ta cần để các số liệu này vào cột đầu ti&ecirc;n của file mà không có header.</p>
+<p>Sau đó tất cả file res_{num}.csv sẽ được n&eacute;n thành file&nbsp;<em>prediction.zip</em>&nbsp;và nộp l&ecirc;n thệ thống.</p>
