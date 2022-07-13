@@ -1,9 +1,16 @@
-<h4><strong>Hướng dẫn nộp kết quả.</strong></h4>
-<p>Với mỗi file t&ecirc;n gt_{folder_number}_{file_number}.csv, đội thi cần xuất kết ra file .csv. T&ecirc;n file .csv
-    sẽ c&oacute; định dạng res_{folder_number}_{file_number}.csv trong đ&oacute; folder_number l&agrave; thứ tự của
-    folder, file_number l&agrave; thứ tự của file trong thư mục tương ứng.</p>
-<p>V&iacute; dụ: file&nbsp;<strong>gt_1_1.csv</strong>&nbsp;th&igrave; cần xuất kết quả ra
-    file&nbsp;<strong>res_1_1.csv</strong></p>
-<p>Sau đ&oacute; tất cả file&nbsp;res_{folder_number}_{file_number}.csv trong c&aacute;c thư mục c&oacute; t&ecirc;n dựa
-    theo folder_number tương ứng, tất cả c&aacute;c thư mục sẽ được n&eacute;n th&agrave;nh
-    file&nbsp;<em>prediction.zip</em>&nbsp;v&agrave; nộp l&ecirc;n thệ thống.</p>
+<p>Mỗi thư mục trong tập dữ liệu l&agrave; dữ liệu đầu v&agrave;o của 11 trạm, c&aacute;c đội thi được sử dụng
+    t&ugrave;y &yacute; để xuất ra kết quả nộp l&ecirc;n hệ thống. Tệp&nbsp;<strong>location.csv&nbsp;</strong>l&agrave;
+    vị tr&iacute; m&agrave; m&ocirc; h&igrave;nh cần dự đo&aacute;n PM2.5 trong 24 giờ tiếp theo. Mỗi vị tr&iacute; xuất
+    ra một tệp kết quả tương ứng.&nbsp;</p>
+<p>Với mỗi thư mục c&oacute; t&ecirc;n l&agrave; {folder_index}, c&aacute;c đội thi sẽ xuất ra thư mục cũng c&oacute;
+    t&ecirc;n l&agrave; {folder_index} chứa số tệp bằng số vị trị cần dự đo&aacute;n trong tệp&nbsp;location.csv với
+    định dạng res_{folder_index}_{location_index}.csv trong đ&oacute;&nbsp;<strong>folder_index&nbsp;</strong>l&agrave;
+    t&ecirc;n của thư mục,&nbsp;<strong>location_index&nbsp;</strong>l&agrave; thứ tự vị tr&iacute; cần dự đo&aacute;n.
+</p>
+<p>V&iacute; dụ: Với thư mục c&oacute; t&ecirc;n l&agrave;&nbsp;<strong>10</strong>,
+    v&agrave;<strong>&nbsp;</strong>tệp&nbsp;<strong>location.csv</strong><strong>&nbsp;</strong>c&oacute; 4 vị
+    tr&iacute; cần dự đo&aacute;n th&igrave; ta cần xuất ra thư mực tương ứng c&oacute; t&ecirc;n
+    l&agrave;&nbsp;<strong>10</strong>, với c&aacute;c tệp nằm b&ecirc;n trong l&agrave;&nbsp;<strong>res_10_1.csv,
+        res_10_2.csv, res_10_3.csv, res_10_4.csv</strong>.<strong><br /></strong></p>
+<p>Sau đ&oacute; tất cả thư mục sẽ được n&eacute;n th&agrave;nh tệp&nbsp;<em>prediction.zip</em>&nbsp;v&agrave; nộp
+    l&ecirc;n thệ thống.&nbsp;(chi tiết xem tại phần&nbsp;<span>Submission</span>)</p>
