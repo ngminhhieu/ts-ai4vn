@@ -1,31 +1,65 @@
 <h1><strong>Giới thiệu chung</strong></h1>
 <h4><strong>Chủ đề.&nbsp;Zero-shot Particulate Matter 2.5 Forecasting.</strong></h4>
-<p>Chỉ số PM2.5 là chỉ số quan trọng được sử dụng để đánh giá chất lượng không kh&iacute;. Nồng độ PM2.5 càng cao th&igrave; chất lượng không kh&iacute; càng suy giảm, g&acirc;y ảnh hưởng tới đường hô hấp và sức khỏe con người. Do đó, việc thu thấp dữ liệu và dự báo chỉ số PM2.5 là vô cùng cần thiết.</p>
-<p>Tuy nhi&ecirc;n, do chi ph&iacute; và địa h&igrave;nh, nhiều khu vực không thể đặt các thiết bị để thu thập dữ liệu PM2.5. V&igrave; vậy, chủ đề của cuộc thi là&nbsp;<em>Dự báo chỉ số PM2.5 cho một vị tr&iacute; bất k&igrave; chưa từng được thu thập dữ liệu.</em></p>
+<p>Chỉ số PM2.5 l&agrave; chỉ số quan trọng được sử dụng để đ&aacute;nh gi&aacute; chất lượng kh&ocirc;ng kh&iacute;.
+    Nồng độ PM2.5 c&agrave;ng cao th&igrave; chất lượng kh&ocirc;ng kh&iacute; c&agrave;ng suy giảm, g&acirc;y ảnh hưởng
+    tới đường h&ocirc; hấp v&agrave; sức khỏe con người. Do đ&oacute;, việc thu thập dữ liệu v&agrave; dự b&aacute;o chỉ
+    số PM2.5 l&agrave; v&ocirc; c&ugrave;ng cần thiết.</p>
+<p>Tuy nhi&ecirc;n, do chi ph&iacute; v&agrave; địa h&igrave;nh, nhiều khu vực kh&ocirc;ng thể đặt c&aacute;c thiết bị
+    để thu thập dữ liệu PM2.5. V&igrave; vậy, chủ đề của cuộc thi l&agrave;&nbsp;<em>Dự b&aacute;o chỉ số PM2.5 cho một
+        vị tr&iacute; bất k&igrave; chưa từng được thu thập dữ liệu.</em></p>
 <h4><strong>Nhiệm vụ.</strong></h4>
-<p>Trong cuộc thi này, nhiệm vụ ch&iacute;nh là dự báo chỉ số PM2.5 trong tương lai cho một vị tr&iacute; bất k&igrave; chưa từng có dữ liệu được thu thập trong quá khứ.</p>
-<p>Các đội sẽ dựa vào bộ dữ liệu huấn luyện do BTC cung cấp, bao gồm dữ liệu groundtruth các trạm cần dự đoán, để đưa ra các giải pháp dự đoán chỉ số PM2.5 tại một v&iacute; trị bất k&igrave; được cung cấp tọa độ. Đồng thời, các phải giải pháp phải có khả năng dự báo PM2.5 12 giờ trong tương lai.</p>
-<p>Đến vòng <strong>Public Test và Private Test</strong>, các đội sẽ được cung cấp các file dữ liệu. Mỗi file là dữ liệu đầu vào cho mô h&igrave;nh mà các đội thi được tùy &yacute; sử dụng. Tương ứng với mỗi file, các đội sẽ phải xuất ra file kết quả tương ứng. Kết quả trong file là các kết quả dự đoán PM2.5 tương lai cho các vị trị cần dự đoán.</p>
+<p>Trong cuộc thi n&agrave;y, nhiệm vụ ch&iacute;nh l&agrave; dự b&aacute;o chỉ số PM2.5 trong tương lai cho một vị
+    tr&iacute; bất k&igrave; chưa từng c&oacute; dữ liệu được thu thập trong qu&aacute; khứ.</p>
+<p>C&aacute;c đội sẽ dựa v&agrave;o bộ dữ liệu huấn luyện do BTC cung cấp, bao gồm dữ liệu groundtruth c&aacute;c trạm
+    cần dự đo&aacute;n, để đưa ra c&aacute;c giải ph&aacute;p dự đo&aacute;n chỉ số PM2.5 tại một v&iacute; trị bất
+    k&igrave; được cung cấp tọa độ. Đồng thời, c&aacute;c phải giải ph&aacute;p phải c&oacute; khả năng dự b&aacute;o
+    PM2.5 12 giờ trong tương lai.</p>
+<p>Đến v&ograve;ng <strong>Public Test v&agrave; Private Test</strong>, c&aacute;c đội sẽ được cung cấp c&aacute;c file
+    dữ liệu. Mỗi file l&agrave; dữ liệu đầu v&agrave;o cho m&ocirc; h&igrave;nh m&agrave; c&aacute;c đội thi được
+    t&ugrave;y &yacute; sử dụng. Tương ứng với mỗi file, c&aacute;c đội sẽ phải xuất ra file kết quả tương ứng. Kết quả
+    trong file l&agrave; c&aacute;c kết quả dự đo&aacute;n PM2.5 tương lai cho c&aacute;c vị trị cần dự đo&aacute;n.</p>
 <h4><strong>Dữ liệu.</strong></h4>
 <p>Dữ liệu gồm 3 tập:</p>
 <ul>
-<li>Dữ liệu huấn luyện gồm 3000 time steps của N trạm</li>
-<li>Dữ liệu kiểm thử cho giai đoạn Public Test gồm 100 file dữ liệu. Mỗi file chưa 24*14 time setps của N trạm. Mỗi trạm nằm trong 1 sheet</li>
-<li>Dữ liệu kiểm thử cho giai đoạn Private Test gồm 300 file dữ liệu. Mỗi file chưa 24*14 time setps của N trạm. Mỗi trạm nằm trong 1 sheet</li>
+    <li>Dữ liệu huấn luyện gồm 3000 time steps của N trạm</li>
+    <li>Dữ liệu kiểm thử cho giai đoạn Public Test gồm 100 folder, mỗi folder chứa 4 file dữ liệu. Mỗi file chứa 24*14
+        timesteps của N trạm. Mỗi trạm nằm trong 1 sheet</li>
+    <li>Dữ liệu kiểm thử cho giai đoạn Private Test gồm 100 folder, mỗi folder chứa 4 file dữ liệu. Mỗi file chứa
+        24*14&nbsp;timesteps của N trạm. Mỗi trạm nằm trong 1 sheet</li>
 </ul>
 <h4><strong>Hướng dẫn nộp kết quả.</strong></h4>
-<p>Với mỗi file t&ecirc;n input_{num}.csv, đội thi cần xuất kết ra file .csv. T&ecirc;n file .csv sẽ có định dạng res_{num}.csv trong đó num là số thứ tự của file.</p>
-<p>V&iacute; dụ: file <strong>input_1.csv</strong> th&igrave; cần xuất kết quả ra file&nbsp;<strong>res_1.csv</strong></p>
-<p>Sau đó tất cả file res_{num}.csv sẽ được n&eacute;n thành file <em>prediction.zip</em> và nộp l&ecirc;n thệ thống.&nbsp;(chi tiết xem tại phần&nbsp;<span style="text-decoration: underline;">Submission</span>)</p>
-<h4><strong>Ti&ecirc;u ch&iacute; đánh giá.&nbsp;</strong></h4>
-<p>MADPE là ti&ecirc;u ch&iacute; đánh giá <strong>ch&iacute;nh</strong> hiệu suất của mô h&igrave;nh. MDAPE là sai số phần trăm tuyệt đối trung vị. MADPE càng nhỏ th&igrave; mô h&igrave;nh càng hiệu quả. (chi tiết xem tại phần <span style="text-decoration: underline;">Evaluation</span>)</p>
+<p>Với mỗi file t&ecirc;n gt_{folder_number}_{file_number}.csv, đội thi cần xuất kết ra file .csv. T&ecirc;n file .csv
+    sẽ c&oacute; định dạng res_{folder_number}_{file_number}.csv trong đ&oacute; folder_number l&agrave; thứ tự của
+    folder, file_number l&agrave; thứ tự của file trong thư mục tương ứng.</p>
+<p>V&iacute; dụ: file <strong>gt_1_1.csv</strong> th&igrave; cần xuất kết quả ra file&nbsp;<strong>res_1_1.csv</strong>
+</p>
+<p>Sau đ&oacute; tất cả file&nbsp;res_{folder_number}_{file_number}.csv sẽ được n&eacute;n th&agrave;nh file
+    <em>prediction.zip</em> v&agrave; nộp l&ecirc;n thệ thống.&nbsp;(chi tiết xem tại phần&nbsp;<span
+        style="text-decoration: underline;">Submission</span>)
+</p>
+<h4><strong>Ti&ecirc;u ch&iacute; đ&aacute;nh gi&aacute;.&nbsp;</strong></h4>
+<p>MADPE l&agrave; ti&ecirc;u ch&iacute; đ&aacute;nh gi&aacute; <strong>ch&iacute;nh</strong> hiệu suất của m&ocirc;
+    h&igrave;nh. MDAPE l&agrave; sai số phần trăm tuyệt đối trung vị. MADPE c&agrave;ng nhỏ th&igrave; m&ocirc;
+    h&igrave;nh c&agrave;ng hiệu quả. (chi tiết xem tại phần <span
+        style="text-decoration: underline;">Evaluation</span>)</p>
 <h4><strong>Quy định.</strong></h4>
-<p>Các đội tham gia không được sử dụng pre-trained model. Ngoài ra, các đội thi cần đọc kĩ <a href="https://bkai.ai/thong-bao-cuoc-thi-bkai-naver-challenge-2022/">quy tắc chung.</a></p>
+<p>C&aacute;c đội tham gia kh&ocirc;ng được sử dụng pre-trained model. Ngo&agrave;i ra, c&aacute;c đội thi cần đọc kĩ <a
+        href="https://bkai.ai/thong-bao-cuoc-thi-bkai-naver-challenge-2022/">quy tắc chung.</a></p>
 <h4><strong>Giai đoạn thi.</strong></h4>
-<p>Cuộc thi <em>Zero-shot Particulate Matter 2.5 Forecasting</em>&nbsp;sẽ được diễn ra với 2 giai đoạn: giai đoạn <strong>Public Test</strong> và giai đoạn <strong>Private Test</strong>:</p>
+<p>Cuộc thi <em>Zero-shot Particulate Matter 2.5 Forecasting</em>&nbsp;sẽ được diễn ra với 2 giai đoạn: giai đoạn
+    <strong>Public Test</strong> v&agrave; giai đoạn <strong>Private Test</strong>:
+</p>
 <ul>
-<li>Giai đoạn <strong>Public Test (15/07/2022 - 15/08/2022)</strong>: nhằm lan tỏa thông tin tới toàn bộ cộng đồng IT &amp; AI tại Việt Nam, từ đó giúp cộng đồng có thời gian tiếp cận với các hướng xử l&yacute; bài toán. Đồng thời, trong thời gian này, các đội thi sẽ được tiếp cận với dữ liệu thực tế, huấn luyện mô h&igrave;nh và đánh giá mô h&igrave;nh thông qua hệ thống đánh giá tự động. Số lần nộp bài tối đa là 10 lần trong 1 ngày.</li>
+    <li>Giai đoạn <strong>Public Test (15/07/2022 - 15/08/2022)</strong>: nhằm lan tỏa th&ocirc;ng tin tới to&agrave;n
+        bộ cộng đồng IT &amp; AI tại Việt Nam, từ đ&oacute; gi&uacute;p cộng đồng c&oacute; thời gian tiếp cận với
+        c&aacute;c hướng xử l&yacute; b&agrave;i to&aacute;n. Đồng thời, trong thời gian n&agrave;y, c&aacute;c đội thi
+        sẽ được tiếp cận với dữ liệu thực tế, huấn luyện m&ocirc; h&igrave;nh v&agrave; đ&aacute;nh gi&aacute; m&ocirc;
+        h&igrave;nh th&ocirc;ng qua hệ thống đ&aacute;nh gi&aacute; tự động. Số lần nộp b&agrave;i tối đa l&agrave; 10
+        lần trong 1 ng&agrave;y.</li>
 </ul>
 <ul>
-<li>Giai đoạn <strong>Private Test</strong><strong> (16/08/2022 - 31/08/2022)</strong>: Trong giai đoạn này, các đội thi sẽ nộp kết quả cuối cùng sử dụng mô h&igrave;nh đ&atilde; được huấn luyện sẵn ở giai đoạn <strong>Public Test</strong>. Số lần nộp bài tối đa là <strong>3&nbsp;lần trong 1 ngày</strong>.</li>
+    <li>Giai đoạn <strong>Private Test</strong><strong> (16/08/2022 - 31/08/2022)</strong>: Trong giai đoạn n&agrave;y,
+        c&aacute;c đội thi sẽ nộp kết quả cuối c&ugrave;ng sử dụng m&ocirc; h&igrave;nh đ&atilde; được huấn luyện sẵn ở
+        giai đoạn <strong>Public Test</strong>. Số lần nộp b&agrave;i tối đa l&agrave; <strong>3&nbsp;lần trong 1
+            ng&agrave;y</strong>.</li>
 </ul>
