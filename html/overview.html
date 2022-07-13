@@ -1,5 +1,5 @@
 <h1><strong>Giới thiệu chung</strong></h1>
-<h4><strong>Chủ đề.&nbsp;Zero-shot Particulate Matter 2.5 Forecasting.</strong></h4>
+<h4><strong>Chủ đề. Air Quality Forecasting Challenge.</strong></h4>
 <p>Chỉ số PM2.5 l&agrave; chỉ số quan trọng được sử dụng để đ&aacute;nh gi&aacute; chất lượng kh&ocirc;ng kh&iacute;.
     Nồng độ PM2.5 c&agrave;ng cao th&igrave; chất lượng kh&ocirc;ng kh&iacute; c&agrave;ng suy giảm, g&acirc;y ảnh hưởng
     tới đường h&ocirc; hấp v&agrave; sức khỏe con người. Do đ&oacute;, việc thu thập dữ liệu v&agrave; dự b&aacute;o chỉ
@@ -13,42 +13,52 @@
 <p>C&aacute;c đội sẽ dựa v&agrave;o bộ dữ liệu huấn luyện do BTC cung cấp, bao gồm dữ liệu groundtruth c&aacute;c trạm
     cần dự đo&aacute;n, để đưa ra c&aacute;c giải ph&aacute;p dự đo&aacute;n chỉ số PM2.5 tại một v&iacute; trị bất
     k&igrave; được cung cấp tọa độ. Đồng thời, c&aacute;c phải giải ph&aacute;p phải c&oacute; khả năng dự b&aacute;o
-    PM2.5 12 giờ trong tương lai.</p>
-<p>Đến v&ograve;ng <strong>Public Test v&agrave; Private Test</strong>, c&aacute;c đội sẽ được cung cấp c&aacute;c file
-    dữ liệu. Mỗi file l&agrave; dữ liệu đầu v&agrave;o cho m&ocirc; h&igrave;nh m&agrave; c&aacute;c đội thi được
-    t&ugrave;y &yacute; sử dụng. Tương ứng với mỗi file, c&aacute;c đội sẽ phải xuất ra file kết quả tương ứng. Kết quả
-    trong file l&agrave; c&aacute;c kết quả dự đo&aacute;n PM2.5 tương lai cho c&aacute;c vị trị cần dự đo&aacute;n.</p>
+    PM2.5 24 giờ trong tương lai.</p>
+<p>Trong v&ograve;ng <strong>Public Test</strong>,&nbsp;c&aacute;c đội sẽ được cung cấp hai bộ dữ liệu: (1) dữ liệu huấn
+    luyện m&ocirc; h&igrave;nh v&agrave; (2) dữ liệu đầu v&agrave;o cho m&ocirc; h&igrave;nh để nộp l&ecirc;n hệ thống.
+    Kết quả trong tệp l&agrave; c&aacute;c kết quả dự đo&aacute;n PM2.5 tương lai trong 24 giờ cho c&aacute;c vị trị cần
+    dự đo&aacute;n.</p>
+<p>Đến v&ograve;ng <strong>Private Test</strong>, c&aacute;c đội thi sẽ được cung cấp dữ liệu tương tự
+    v&ograve;ng&nbsp;<strong>Public Test&nbsp;</strong>nhưng sẽ kh&ocirc;ng được cung cấp th&ecirc;m dữ liệu huấn luyện.
+</p>
 <h4><strong>Dữ liệu.</strong></h4>
 <p>Dữ liệu gồm 3 tập:</p>
 <ul>
-    <li>Dữ liệu huấn luyện gồm 3000 time steps của N trạm</li>
-    <li>Dữ liệu kiểm thử cho giai đoạn Public Test gồm 100 folder, mỗi folder chứa 4 file dữ liệu. Mỗi file chứa 24*14
-        timesteps của N trạm. Mỗi trạm nằm trong 1 sheet</li>
-    <li>Dữ liệu kiểm thử cho giai đoạn Private Test gồm 100 folder, mỗi folder chứa 4 file dữ liệu. Mỗi file chứa
-        24*14&nbsp;timesteps của N trạm. Mỗi trạm nằm trong 1 sheet</li>
+    <li>Dữ liệu huấn luyện gồm 9000 time steps của 11 trạm</li>
+    <li>Dữ liệu kiểm thử cho giai đoạn Public Test gồm 100 thư mục, mỗi thư mục chứa 11 tệp dữ liệu. Mỗi tệp chứa 24*14
+        timesteps của 11 trạm.</li>
+    <li>Dữ liệu kiểm thử cho giai đoạn Private Test gồm 100 thư mục, mỗi thư mục chứa 11 tệp dữ liệu. Mỗi tệp chứa
+        24*14&nbsp;timesteps của 11 trạm.</li>
 </ul>
 <h4><strong>Hướng dẫn nộp kết quả.</strong></h4>
-<p>Với mỗi file t&ecirc;n gt_{folder_number}_{file_number}.csv, đội thi cần xuất kết ra file .csv. T&ecirc;n file .csv
-    sẽ c&oacute; định dạng res_{folder_number}_{file_number}.csv trong đ&oacute; folder_number l&agrave; thứ tự của
-    folder, file_number l&agrave; thứ tự của file trong thư mục tương ứng.</p>
-<p>V&iacute; dụ: file <strong>gt_1_1.csv</strong> th&igrave; cần xuất kết quả ra file&nbsp;<strong>res_1_1.csv</strong>
+<p>Mỗi thư mục trong tập dữ liệu l&agrave; dữ liệu đầu v&agrave;o của 11 trạm, c&aacute;c đội thi được sử dụng
+    t&ugrave;y &yacute; để xuất ra kết quả nộp l&ecirc;n hệ thống. Tệp&nbsp;<strong>location.csv&nbsp;</strong>l&agrave;
+    vị tr&iacute; m&agrave; m&ocirc; h&igrave;nh cần dự đo&aacute;n PM2.5 trong 24 giờ tiếp theo. Mỗi vị tr&iacute; xuất
+    ra một tệp kết quả tương ứng.&nbsp;</p>
+<p>Với mỗi thư mục c&oacute; t&ecirc;n l&agrave; {folder_index}, c&aacute;c đội thi sẽ xuất ra thư mục cũng c&oacute;
+    t&ecirc;n l&agrave; {folder_index} chứa số tệp bằng số vị trị cần dự đo&aacute;n trong tệp location.csv với định
+    dạng res_{folder_index}_{location_index}.csv trong đ&oacute;&nbsp;<strong>folder_index&nbsp;</strong>l&agrave;
+    t&ecirc;n của thư mục,&nbsp;<strong>location_index&nbsp;</strong>l&agrave; thứ tự vị tr&iacute; cần dự đo&aacute;n.
 </p>
-<p>Sau đ&oacute; tất cả file&nbsp;res_{folder_number}_{file_number}.csv trong c&aacute;c thư mục c&oacute; t&ecirc;n dựa
-    theo folder_number tương ứng,&nbsp;sẽ được n&eacute;n th&agrave;nh file <em>prediction.zip</em> v&agrave; nộp
-    l&ecirc;n thệ thống.&nbsp;(chi tiết xem tại phần&nbsp;<span style="text-decoration: underline;">Submission</span>)
-</p>
+<p>V&iacute; dụ: Với thư mục c&oacute; t&ecirc;n l&agrave;&nbsp;<strong>10</strong>,
+    v&agrave;<strong>&nbsp;</strong>tệp&nbsp;<strong>location.csv&nbsp;</strong>c&oacute; 4 vị tr&iacute; cần dự
+    đo&aacute;n th&igrave; ta cần xuất ra thư mực tương ứng c&oacute; t&ecirc;n l&agrave;&nbsp;<strong>10</strong>, với
+    c&aacute;c tệp nằm b&ecirc;n trong l&agrave;&nbsp;<strong>res_10_1.csv, res_10_2.csv, res_10_3.csv,
+        res_10_4.csv</strong>.<strong><br /></strong></p>
+<p>Sau đ&oacute; tất cả thư mục sẽ được n&eacute;n th&agrave;nh tệp&nbsp;<em>prediction.zip</em> v&agrave; nộp l&ecirc;n
+    thệ thống.&nbsp;(chi tiết xem tại phần&nbsp;<span style="text-decoration: underline;">Submission</span>)</p>
 <h4><strong>Ti&ecirc;u ch&iacute; đ&aacute;nh gi&aacute;.&nbsp;</strong></h4>
 <p>MADPE l&agrave; ti&ecirc;u ch&iacute; đ&aacute;nh gi&aacute; <strong>ch&iacute;nh</strong> hiệu suất của m&ocirc;
     h&igrave;nh. MDAPE l&agrave; sai số phần trăm tuyệt đối trung vị. MADPE c&agrave;ng nhỏ th&igrave; m&ocirc;
     h&igrave;nh c&agrave;ng hiệu quả. (chi tiết xem tại phần <span
         style="text-decoration: underline;">Evaluation</span>)</p>
 <h4><strong>Quy định.</strong></h4>
-<p>C&aacute;c đội tham gia kh&ocirc;ng được sử dụng pre-trained model. Ngo&agrave;i ra, c&aacute;c đội thi cần đọc kĩ <a
-        href="https://bkai.ai/thong-bao-cuoc-thi-bkai-naver-challenge-2022/">quy tắc chung.</a></p>
+<p>C&aacute;c đội tham gia kh&ocirc;ng được sử dụng pre-trained model. Ngo&agrave;i ra, c&aacute;c đội thi cần đọc kĩ
+    trong mục <span style="text-decoration: underline;">Terms and Conditions</span><a
+        href="https://bkai.ai/thong-bao-cuoc-thi-bkai-naver-challenge-2022/">.</a></p>
 <h4><strong>Giai đoạn thi.</strong></h4>
-<p>Cuộc thi <em>Zero-shot Particulate Matter 2.5 Forecasting</em>&nbsp;sẽ được diễn ra với 2 giai đoạn: giai đoạn
-    <strong>Public Test</strong> v&agrave; giai đoạn <strong>Private Test</strong>:
-</p>
+<p>Cuộc thi <em>AI4VN 2022 -&nbsp;Air Quality Forecasting Challenge</em>&nbsp;sẽ được diễn ra với 2 giai đoạn: giai đoạn
+    <strong>Public Test</strong> v&agrave; giai đoạn <strong>Private Test</strong>:</p>
 <ul>
     <li>Giai đoạn <strong>Public Test (15/07/2022 - 15/08/2022)</strong>: nhằm lan tỏa th&ocirc;ng tin tới to&agrave;n
         bộ cộng đồng IT &amp; AI tại Việt Nam, từ đ&oacute; gi&uacute;p cộng đồng c&oacute; thời gian tiếp cận với
@@ -59,7 +69,7 @@
 </ul>
 <ul>
     <li>Giai đoạn <strong>Private Test</strong><strong> (16/08/2022 - 31/08/2022)</strong>: Trong giai đoạn n&agrave;y,
-        c&aacute;c đội thi sẽ nộp kết quả cuối c&ugrave;ng sử dụng m&ocirc; h&igrave;nh đ&atilde; được huấn luyện sẵn ở
-        giai đoạn <strong>Public Test</strong>. Số lần nộp b&agrave;i tối đa l&agrave; <strong>3&nbsp;lần trong 1
-            ng&agrave;y</strong>.</li>
+        c&aacute;c đội thi tiếp tục cải thiện m&ocirc; h&igrave;nh với dữ liệu kiểm thử mới do BTC cung cấp. Số lần nộp
+        b&agrave;i tối đa nộp b&agrave;i v&agrave; thời gian mở để nộp l&ecirc;n hệ thống sẽ được BTC quyết định dựa
+        tr&ecirc;n t&igrave;nh h&igrave;nh thực tế v&agrave; th&ocirc;ng b&aacute;o lại sau.</li>
 </ul>
