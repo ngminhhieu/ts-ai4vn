@@ -1,8 +1,8 @@
 title: AI4VN 2022 - Air Quality Forecasting Challenge
 description: Cuộc thi nhằm thúc đẩy ứng dụng và phát triển các kỹ thuật trí tuệ nhân tạo trong việc dự đoán chỉ số PM2.5 tại vị trí không có dữ liệu.
-image: logo.svg
+image: logo.png
 has_registration: True
-end_date: 2022-05-31
+end_date: 2022-08-17 00:00:00
 html:
   overview: overview.html
   data: data.html
@@ -14,8 +14,8 @@ phases:
     phasenumber: 1
     label: "Public Test"
     color: yellow
-    start_date: 2022-07-15
-    max_submissions: 999
+    start_date: 2022-07-15 17:00:00
+    max_submissions: 300
     max_submissions_per_day: 10
     scoring_program: scoring_program.zip
     reference_data: public_ground_truth.zip
@@ -23,8 +23,8 @@ phases:
     phasenumber: 2
     label: "Private Test"
     color: orange
-    start_date: 2022-08-31 5:00:00
-    max_submissions: 999
+    start_date: 2022-07-17 17:00:00
+    max_submissions: 150
     max_submissions_per_day: 5
     scoring_program: scoring_program.zip
     reference_data: private_ground_truth.zip
