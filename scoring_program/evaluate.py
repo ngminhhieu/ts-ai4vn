@@ -86,9 +86,11 @@ if __name__ == "__main__":
                 if len(pred_df) < len(gt_df):
                     print("Missing {} values in the file res_{}_{}.csv".format(
                         len(gt_df)-len(pred_df), folder_th, file_th))
+                    exit()
                 if len(pred_df) > len(gt_df):
-                    print("Exceeding values in the file res_{}_{}.csv".format(
+                    print("Exceeding {} values in the file res_{}_{}.csv".format(
                         len(pred_df)-len(gt_df), folder_th, file_th))
+                    exit()
                 else:
                     gt_np[folder_th-1, file_th-1, :] = gt_df.values.flatten()
                     pred_np[folder_th-1, file_th-1,
