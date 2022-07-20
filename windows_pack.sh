@@ -8,7 +8,7 @@ rm competition.zip
 
 7z a competition.zip ./html/award.html ./html/data.html ./html/evaluation.html ./html/overview.html ./html/submission.html ./html/terms.html
 7z a competition.zip competition.yaml scoring_program.zip public_ground_truth.zip private_ground_truth.zip
-7z a competition.zip ./logo/logo.svg
+7z a competition.zip ./logo/logo.png
 
 rm public_ground_truth.zip
 rm private_ground_truth.zip
