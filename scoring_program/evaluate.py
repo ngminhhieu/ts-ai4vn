@@ -74,9 +74,11 @@ if __name__ == "__main__":
         if num_files_ref > num_files_res:
             print("Missing {} files in the folder res/{}".format(num_files_ref -
                   num_files_res, folder_th))
+            exit()
         elif num_files_ref < num_files_res:
             print("Exceeding {} files in the folder res/{}".format(num_files_res -
                   num_files_ref, folder_th))
+            exit()
         else:
             for file_th in range(1, num_files+1):
                 gt_df = pd.read_csv(os.path.join(ref_folder, "gt_{}_{}.csv".format(
