@@ -1,5 +1,6 @@
 
 import os
+from pprint import pprint
 import sys
 import pandas as pd
 import numpy as np
@@ -103,10 +104,10 @@ if __name__ == "__main__":
     res_dict['mape'] = eval_mape(gt_np, pred_np)
     res_dict['rmse'] = eval_rmse(gt_np, pred_np)
     res_dict['mdape'] = eval_mdape(gt_np, pred_np)
-    res_dict['r2'] = eval_r2(gt_np, pred_np)
+    # res_dict['r2'] = eval_r2(gt_np, pred_np)
     with open(os.path.join(output_dir, 'scores.txt'), 'w') as output_file:
         output_file.write("mdape: {:f}\n".format(round(res_dict['mdape'], 4)))
         output_file.write("mape: {:f}\n".format(round(res_dict['mape'], 4)))
         output_file.write("mae: {:f}\n".format(round(res_dict['mae'], 4)))
         output_file.write("rmse: {:f}\n".format(round(res_dict['rmse'], 4)))
-        output_file.write("r2: {:f}\n".format(round(res_dict['r2'], 4)))
+        # output_file.write("r2: {:f}\n".format(round(res_dict['r2'], 4)))
